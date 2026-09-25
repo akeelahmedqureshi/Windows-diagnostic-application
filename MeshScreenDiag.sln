@@ -1,0 +1,43 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{6D9ED3EC-5278-47B3-98B6-7FEFB8BA8029}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MeshScreenDiag.Core", "src\MeshScreenDiag.Core\MeshScreenDiag.Core.csproj", "{D87EBDCD-A153-43BE-869C-727D9E426FCC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MeshScreenDiag", "src\MeshScreenDiag\MeshScreenDiag.csproj", "{BD7CA64A-B463-494C-84B6-0063184D8EEE}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{7885ACAE-1476-4679-8520-7207D4BC9DB4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MeshScreenDiag.Core.Tests", "tests\MeshScreenDiag.Core.Tests\MeshScreenDiag.Core.Tests.csproj", "{FE7FFE3C-88DD-4EAF-9606-E3B168848FA7}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D87EBDCD-A153-43BE-869C-727D9E426FCC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D87EBDCD-A153-43BE-869C-727D9E426FCC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D87EBDCD-A153-43BE-869C-727D9E426FCC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D87EBDCD-A153-43BE-869C-727D9E426FCC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BD7CA64A-B463-494C-84B6-0063184D8EEE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BD7CA64A-B463-494C-84B6-0063184D8EEE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BD7CA64A-B463-494C-84B6-0063184D8EEE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BD7CA64A-B463-494C-84B6-0063184D8EEE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FE7FFE3C-88DD-4EAF-9606-E3B168848FA7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FE7FFE3C-88DD-4EAF-9606-E3B168848FA7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FE7FFE3C-88DD-4EAF-9606-E3B168848FA7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FE7FFE3C-88DD-4EAF-9606-E3B168848FA7}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{D87EBDCD-A153-43BE-869C-727D9E426FCC} = {6D9ED3EC-5278-47B3-98B6-7FEFB8BA8029}
+		{BD7CA64A-B463-494C-84B6-0063184D8EEE} = {6D9ED3EC-5278-47B3-98B6-7FEFB8BA8029}
+		{FE7FFE3C-88DD-4EAF-9606-E3B168848FA7} = {7885ACAE-1476-4679-8520-7207D4BC9DB4}
+	EndGlobalSection
+EndGlobal

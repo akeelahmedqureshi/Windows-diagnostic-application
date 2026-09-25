@@ -1,0 +1,35 @@
+name: build
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: 8.0.x
+
+      - name: Test
+        run: dotnet test tests/MeshScreenDiag.Core.Tests -c Release
+
+      - name: Publish single-file exe (win-x64)
+        run: dotnet publish src/MeshScreenDiag/MeshScreenDiag.csproj -c Release -r win-x64 --self-contained true -p:PublishSingleFile=true -o dist/win-x64
+
+      - name: Publish single-file exe (win-arm64)
+        run: dotnet publish src/MeshScreenDiag/MeshScreenDiag.csproj -c Release -r win-arm64 --self-contained true -p:PublishSingleFile=true -o dist/win-arm64
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: MeshScreenDiag-win-x64
+          path: dist/win-x64/MeshScreenDiag.exe
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: MeshScreenDiag-win-arm64
+          path: dist/win-arm64/MeshScreenDiag.exe

@@ -1,0 +1,11 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <!-- Platform-neutral logic: data model, analysis rules, diffing, catalogs and report
+       generation. Kept free of Windows APIs so it can be unit tested on any OS. -->
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <RootNamespace>MeshScreenDiag.Core</RootNamespace>
+  </PropertyGroup>
+  <ItemGroup>
+    <InternalsVisibleTo Include="MeshScreenDiag.Core.Tests" />
+  </ItemGroup>
+</Project>
