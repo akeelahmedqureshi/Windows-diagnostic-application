@@ -8,6 +8,14 @@ param(
 $ErrorActionPreference = "Stop"
 Set-Location $PSScriptRoot
 
+if (-not (Get-Command dotnet -ErrorAction SilentlyContinue)) {
+    Write-Host "The .NET 8 SDK is not installed (the 'dotnet' command was not found)." -ForegroundColor Red
+    Write-Host "Install it with:  winget install Microsoft.DotNet.SDK.8"
+    Write-Host "or download it from https://dotnet.microsoft.com/download/dotnet/8.0 (SDK, Windows x64 installer),"
+    Write-Host "then CLOSE and REOPEN PowerShell and run this script again."
+    exit 1
+}
+
 dotnet test tests/MeshScreenDiag.Core.Tests -c $Configuration
 if ($LASTEXITCODE -ne 0) { throw "Tests failed" }
 
